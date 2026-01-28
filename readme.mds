@@ -1,1 +1,33 @@
 readme.mds
+# clonar se ainda não clonou
+git clone git@github.com:BTCBATES/Defihack.git
+cd Defihack
+
+# criar branch de trabalho
+git checkout -b add-site-structure
+
+# criar diretórios
+mkdir -p docs/interactive/quiz/topics/2.1 \
+         docs/interactive/quiz/topics/2.2 \
+         docs/interactive/quiz/topics/2.3 \
+         docs/interactive/quiz/topics/2.4 \
+         docs/interactive/quiz/topics/2.5 \
+         docs/content/pilares \
+         docs/content/trilhas \
+         docs/content/regras-e-avaliacao \
+         assets/img/pilar-1 assets/img/pilar-2 assets/img/v3-v4 \
+         assets/src/drawio assets/src/excalidraw assets/src/mermaid \
+         diagrams/mermaid/pilar-1 diagrams/mermaid/pilar-2 diagrams/mermaid/v3-v4 \
+         tools docs/interactive/clock docs/interactive/joke
+
+# criar .gitkeep em diretórios vazios (opcional)
+touch docs/content/pilares/.gitkeep docs/content/trilhas/.gitkeep docs/content/regras-e-avaliacao/.gitkeep
+touch assets/img/pilar-1/.gitkeep assets/img/pilar-2/.gitkeep assets/img/v3-v4/.gitkeep
+touch assets/src/drawio/.gitkeep assets/src/excalidraw/.gitkeep assets/src/mermaid/.gitkeep
+touch diagrams/mermaid/pilar-1/.gitkeep diagrams/mermaid/pilar-2/.gitkeep diagrams/mermaid/v3-v4/.gitkeep
+
+# crie os arquivos abaixo (copie/cole os conteúdos)
+# depois:
+git add .
+git commit -m "Add site/docs structure: docs, interactive quiz, assets, diagrams, tools, clock, joke"
+git push -u origin add-site-structure
